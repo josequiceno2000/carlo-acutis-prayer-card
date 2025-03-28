@@ -1,3 +1,191 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
 body {
-    background-color: lightgray;
+    background-color: rgba(125, 170, 204, 0.105);
+    font-family: "Libre Baskerville";
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+h1 {
+    font-family: "Boldonse";
+    font-size: 3rem;
+    color: #660109;
+    margin-bottom: .5rem;
+}
+
+h2, h3 {
+    font-weight: bold;
+    color: #660109;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: bloack;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: #c1c1ac7d;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header-content {
+    margin-bottom: 1rem;
+}
+
+hgroup p {
+    font-style: italic;
+}
+
+nav {
+    background-color: #660109;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    justify-content: stretch;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: ;
+    border: 3px solid white;
+    padding: 1rem 3rem;
+}
+
+/* Main Content Styles (Flexbox) */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.main-article {
+    flex: 3 1 70%;
+    padding-right: 1rem;
+}
+
+.main-aside {
+    flex: 1 1 30%;
+    padding-left: 1rem;
+    background-color: #66010939;
+    max-height: 825px;
+}
+
+/* Article Styles */
+article h2 {
+    margin-bottom: 1rem;
+}
+
+article ul {
+    list-style: none;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+figure {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 1.1rem;
+    color: black;
+    margin-top: 0.5rem;
+}
+
+blockquote {
+    
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.citation {
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+
+/* Aside */
+aside h2 {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #f4f4f421;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Specific */
+
+article p {
+    letter-spacing: 0.2px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-article,
+    .main-aside {
+        flex: 1 1 100%; /* Take full width on smaller screens */
+        padding: 0;
+    }
+
+    .main-aside{
+        margin-top: 2rem;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li{
+        margin: 0.5rem 0;
+    }
 }
